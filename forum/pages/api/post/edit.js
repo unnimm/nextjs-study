@@ -13,7 +13,10 @@ export default async function hander(req, res) {
     }
     await db
       .collection("post")
-      .insertOne(req.body)
+      .updateOne(
+        { _id: new ObjectId(req.body._id) },
+        { $set: { title: req.body.title, content: req.body.content } }
+      );
     return res.redirect(302, "/list");
   }
 }
