@@ -3,9 +3,9 @@ import { useRouter } from "next/navigation";
 export default function Content(props) {
     const router = useRouter();
 
-    const onClick=()=>{
-        router.push("/"+{props.params.id})
-    }
+    // const onClick=()=>{
+    //     router.push("/"+{props.params.id})
+    // }
   return (
     <>
       <div
