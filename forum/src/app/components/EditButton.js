@@ -10,6 +10,6 @@ export default function EditButton(props){
    }
 
     return(
-        <button className="w-[100px] h-[40px] border" onClick={onClickHandler}>수정하기</button>
+        <button onClick={onClickHandler}>✏️</button>
     )
 }

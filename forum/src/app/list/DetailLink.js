@@ -11,7 +11,8 @@ export default function DetailLink(props){
 
     return(
         <>
-        <button onClick={onClickHandler}>이동</button>
+        <button onClick={onClickHandler}>이동
+      </button>
         </>
        
     )

@@ -1,5 +1,6 @@
 import { connectDB } from "util/database.js";
 import { ObjectId } from "mongodb";
+
 export default async function hander(req, res) {
   let db = (await connectDB).db("forum");
   let result = await db.collection("post").find().toArray();
