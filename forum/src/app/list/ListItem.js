@@ -24,7 +24,11 @@ export default function ListItem({ result }) {
                     fetch('/api/post/delete', {
                       method: "DELETE",
                       body: result[i]._id,
-                    })
+                    }).then((r)=>{
+                        if (r.status == 200){
+                            return r.json()
+                        }
+                    }).then(()=>{})
                 }}
                 >
                   버튼
