@@ -1,6 +1,8 @@
 import { connectDB } from "util/database.js";
 import ListItem from './ListItem';
 
+export const dynamic = 'force-dynamic'
+
 export default async function List(props) {
   const client = await connectDB;
   const db = client.db("forum");
