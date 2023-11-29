@@ -20,15 +20,18 @@ export default function ListItem({ result }) {
                 <EditButton id={result[i]._id} />
                 <div
                   onClick={() => {
-                    console.log(result[i])
-                    fetch('/api/post/delete', {
-                      method: "DELETE",
-                      body: result[i]._id,
-                    }).then((r)=>{
-                        if (r.status == 200){
-                            return r.json()
-                        }
-                    }).then(()=>{})
+                    fetch(`api/post/delete?_id=${result[i]._id}`).then(()=>{
+                      console.log("삭제 완료")
+                    })
+                    // console.log(result[i])
+                    // fetch('/api/post/delete', {
+                    //   method: "DELETE",
+                    //   body: result[i]._id,
+                    // }).then((r)=>{
+                    //     if (r.status == 200){
+                    //         return r.json()
+                    //     }
+                    // }).then(()=>{})
                 }}
                 >
                   버튼
